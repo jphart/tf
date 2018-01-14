@@ -77,8 +77,8 @@ with tf.Session() as sess:
     # calculate the number of lines to animation
     fit_num_plots = math.floor(num_training_iter/display_every)
     # add storage of factor and offset values from each epoch
-    fit_size_factor = np.zeros(fit_num_plots)
-    fit_price_offsets = np.zeros(fit_num_plots)
+    fit_size_factor = np.zeros(int(fit_num_plots))
+    fit_price_offsets = np.zeros(int(fit_num_plots))
     fit_plot_idx = 0
 
    # keep iterating the training data
@@ -154,4 +154,4 @@ with tf.Session() as sess:
     ani = animation.FuncAnimation(fig, animate, frames=np.arange(0, fit_plot_idx), init_func=initAnim,
                                  interval=1000, blit=True)
 
-    plt.show()   
+    plt.show()
