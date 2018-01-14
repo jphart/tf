@@ -32,15 +32,15 @@ def normalize(array):
 num_training_samples = math.floor(num_house * 0.7)
 
 # First 70 is training data
-train_house_size = np.asarray(house_size[:num_training_samples])
-train_house_price = np.asarray(house_price[:num_training_samples])
+train_house_size = np.asarray(house_size[:int(num_training_samples)])
+train_house_price = np.asarray(house_price[:int(num_training_samples)])
 
 train_house_size_norm = normalize(train_house_size)
 train_house_price_norm = normalize(train_house_price)
 
 # 30%  is test data
-test_house_size = np.asarray(house_size[num_training_samples:])
-test_house_price = np.asarray(house_price[num_training_samples:])
+test_house_size = np.asarray(house_size[int(num_training_samples):])
+test_house_price = np.asarray(house_price[int(num_training_samples):])
 
 test_house_size_norm = normalize(test_house_size)
 test_house_price_norm = normalize(test_house_price)
