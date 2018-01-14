@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 #Set up some random house sizes
-num_house = 160
+num_house = 1000
 np.random.seed(42)
 house_size = np.random.randint(low=1000, high=3500, size=num_house)
 
