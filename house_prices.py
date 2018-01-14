@@ -19,7 +19,7 @@ house_price = house_size * 100.0 + np.random.randint(low=20000, high=70000, size
 plt.plot(house_size, house_price, "bx")
 plt.ylabel("Price")
 plt.xlabel("Size")
-plt.show()
+#plt.show()
 
 
 # Normalize the data
@@ -141,4 +141,4 @@ with tf.Session as sess:
 
     ani = animation.FuncAnimation(fig, animate, frames=np.arange(0, fit_plot_idx), init_func=initAnim,
                               interval=1000, blit=True)
-    plt.show()   
+    plt.show()
