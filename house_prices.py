@@ -17,5 +17,5 @@ house_price = house_size * 100.0 + np.random.randint(low=20000, high=70000, size
 
 #Plot the house prices
 plt.plot(house_size, house_price, "bx")
-plot.ylabel("Price")
-plot.xlabel("Size")
+plt.ylabel("Price")
+plt.xlabel("Size")
