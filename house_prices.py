@@ -33,10 +33,10 @@ num_training_samples = math.floor(num_house * 0.7)
 
 # First 70 is training data
 train_house_size = np.asarray(house_size[:int(num_training_samples)])
-train_house_price = np.asarray(house_price[:int(num_training_samples)])
+train_price = np.asarray(house_price[:int(num_training_samples)])
 
 train_house_size_norm = normalize(train_house_size)
-train_price_norm = normalize(train_house_price)
+train_price_norm = normalize(train_price)
 
 # 30%  is test data
 test_house_size = np.asarray(house_size[int(num_training_samples):])
