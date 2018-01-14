@@ -7,12 +7,12 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 #Set up some random house sizes
-num_house = 160
+num_house = 1000
 np.random.seed(42)
 house_size = np.random.randint(low=1000, high=3500, size=num_house)
 
 #Set up prices based on the size + random offset
-np.random.seed(42)
+np.random.seed(12341)
 house_price = house_size * 100.0 + np.random.randint(low=20000, high=70000, size=num_house)
 
 #Plot the house prices
@@ -72,7 +72,7 @@ with tf.Session() as sess:
 
     # set how often to display training progress and number of training iterations
     display_every = 2
-    num_training_iter = 50
+    num_training_iter = 100
 
     # calculate the number of lines to animation
     fit_num_plots = math.floor(num_training_iter/display_every)
